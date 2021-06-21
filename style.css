@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --darkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGreyMagenta: hsl(303, 10%, 53%);
+  --lightGreyMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*decoration 400 500 700*/
+.decoration-top {
+  position: absolute;
+  z-index: -1;
+  background-attachment: fixed;
+}
+.decoration-bottom {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+}
+/*general*/
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 130px;
+  font-family: "Spartan", sans-serif;
+}
+
+/*Info*/
+.info-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 77px;
+}
+.info-main_desc {
+  max-width: 425px;
+}
+.info-main_desc h1 {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 14px;
+  color: var(--darkMagenta);
+}
+.info-main_desc p {
+  font-weight: 500;
+  color: var(--darkGreyMagenta);
+}
+.info-main_rate {
+  max-width: 540px;
+}
+.info-main_rate div {
+  width: 445px;
+  height: 56px;
+  background-color: var(--lightGreyMagenta);
+  margin-bottom: 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.info-main_rate .review {
+  margin-right: 100px;
+}
+.info-main_rate .guru {
+  margin-left: 50px;
+}
+.info-main_rate .best {
+  margin-left: 100px;
+}
+.info-main_rate h2 {
+  font-size: 15px;
+  color: var(--darkMagenta);
+  display: flex;
+  padding-left: 32px;
+  justify-content: center;
+}
+.info-main_rate h2::before {
+  content: "";
+  background-image: url(./images/icon-star.svg);
+  background-size: 18px 18px;
+  background-repeat: space;
+  background-position: initial;
+  height: 18px;
+  width: 100px;
+  margin-right: 18px;
+}
+/*experiences*/
+.experiences {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.experiences article {
+  max-width: 350px;
+  min-height: 234px;
+  border-radius: 6px;
+  background-color: var(--darkMagenta);
+  padding: 40px 32px;
+}
+.experiences article img {
+  width: 42px;
+  height: 42px;
+  margin-right: 24px;
+  border-radius: 100px;
+}
+.experiences article p {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+}
+.experience2 {
+  margin-top: 18px;
+}
+.experience3 {
+  margin-top: 36px;
+}
+.experiences-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.experiences-main h2 {
+  color: var(--lightGreyMagenta);
+  font-weight: 700;
+  font-size: 15px;
+}
+.experiences-main span {
+  color: var(--softPink);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.experiences-name {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    text-align: center;
+  }
+  .info-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-main p {
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 48px;
+  }
+  .info-main_rate .review {
+    margin-right: 0px;
+  }
+  .info-main_rate .guru {
+    margin-left: 0px;
+  }
+  .info-main_rate .best {
+    margin-left: 0px;
+  }
+  .container {
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .experiences {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experiences article {
+    margin-bottom: 18px;
+  }
+  .experience2 {
+    margin-top: 0px;
+  }
+  .experience3 {
+    margin-top: 0px;
+  }
+  .decoration-bottom {
+    visibility: hidden;
+  }
+  .info-main_rate {
+    width: 100%;
+  }
+
+  .info-main_rate h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    padding: 15px;
+    justify-content: center;
+  }
+  .info-main_rate h2::before {
+    margin-bottom: 15px;
+  }
+  .info-main_rate div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 78px;
+  }
+}
